@@ -35,10 +35,11 @@ public class BookTest {
 	private BookRepository bookRepository;
 
 	@Test
-	public void testTitle() {
+	public void testBook() {
 		
 		Book book = bookRepository.findOne("545645");
 		assertEquals("Wrong Title", "Art of Zen", book.getTitle());
+		assertEquals("Wrong Author", "Allan Watts", book.getAuthor());
 	}
 	
 	
@@ -58,5 +59,4 @@ public class BookTest {
 		Assert.assertEquals(9, list.size());
 	}
 
-	
 }

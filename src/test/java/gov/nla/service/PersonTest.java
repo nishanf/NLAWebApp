@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -43,6 +44,12 @@ public class PersonTest {
 		assertEquals("Wrong Phone", "04234 768 435", person.getPhone());
 	}
 	
+	@Test
+	public void testFindAllPersons() {
+		
+		List<Person> personList = personRepository.findAll();
+		Assert.assertEquals(3, personList.size());
+	}
 	
 	@Test
 	public void testBurrowings() {
@@ -50,7 +57,7 @@ public class PersonTest {
 		Person person = personRepository.findOne(1L);
 		List<Burrowing> burrowings = person.getBurrowings();
 	
-		assertEquals("Wrong Name", 4, burrowings.size());
+		Assert.assertEquals(4, burrowings.size());
 	}
 
 }
