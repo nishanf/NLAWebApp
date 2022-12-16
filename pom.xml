@@ -9,7 +9,7 @@
 	<properties>
 		<h2.version>1.4.187</h2.version>
 		<junit.version>4.12</junit.version>		
-		<spring.version>4.2.3.RELEASE</spring.version>
+		<spring.version>5.2.20.RELEASE</spring.version>
 		<spring.data.jpa.version>1.11.1.RELEASE</spring.data.jpa.version>
 		<hibernate.version>4.1.9.Final</hibernate.version>
 	</properties>
